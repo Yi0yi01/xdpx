@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>Sportz &mdash; Colorlib Sports Team Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="{{ url_for ('static', filename='fonts/icomoon/style.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/owl.theme.default.min.css')}}">
+
+
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/aos.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}">
+
+  </head>
+  <body>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-logo">
+          <a href="#"><img src="{{ url_for ('static', filename='images/logo.png')}}" alt="Image"></a>
+        </div>
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar absolute transparent" role="banner">
+      <div class="py-3">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-md-3">
+            </div>
+            <div class="col-6 col-md-9 text-right">
+              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-envelope mr-3"></span> <span class="d-none d-md-block">youremail@domain.com</span></a></div>
+              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">登录/注册</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="site-navigation position-relative text-right bg-black text-md-right" role="navigation">
+        <div class="container position-relative">
+          <div class="site-logo">
+            <a href="index.html"><img src="{{ url_for ('static', filename='images/logo.png')}}" alt=""></a>
+          </div>
+
+          <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+          <ul class="site-menu js-clone-nav d-none d-md-block">
+            <li><a href="/">首页</a></li>
+            <li><a href="/news">新闻</a></li>
+            <li><a href="/team">运动员</a></li>
+            <li><a href="/matches">活动</a></li>
+            <li><a href="/about">关于</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  
+    <div class="site-blocks-cover overlay" style="background-image: url({{ url_for ('static', filename='images/logo-ITTF.png')}});" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-start">
+          <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
+            <h1 class="bg-text-line">运动员资讯</h1>
+            <p class="mt-4"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center mb-5">
+            <h2 class="text-black">世界排名</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">1</span>
+              <img src="{{ url_for ('static', filename='images/athlete/xuxin.jpg')}}" alt="Image" class="img-fluid image rounded-circle">
+              <h2>许昕</h2>
+              <span class="position">中国</span>
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">2</span>
+              <img src="{{ url_for ('static', filename='images/athlete/fzd.jpg')}}" alt="Image" class="img-fluid image rounded-circle">
+              <h2>樊振东</h2>
+              <span class="position">中国</span>
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">3</span>
+              <img src="{{ url_for ('static', filename='images/athlete/ml.jpg')}}" alt="Image" class="img-fluid image rounded-circle">
+              <h2>马龙</h2>
+              <span class="position">中国</span>
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">4</span>
+              <img src="{{ url_for ('static', filename='images/athlete/lgy.jpg')}}" alt="Image" class="img-fluid image rounded-circle">
+              <h2>林高远</h2>
+              <span class="position">中国</span>
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">5</span>
+              <img src="{{ url_for ('static', filename='images/athlete/zbzh.jpg')}}" alt="Image" class="img-fluid image rounded-circle">
+              <h2>张本智和</h2>
+              <span class="position">日本</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">6</span>
+              <img src="{{ url_for ('static', filename='images/athlete/ljr.jpg')}}" alt="Image" class="img-fluid image rounded-circle">
+              <h2>林昀儒</h2>
+              <span class="position">中国台北</span>
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">7</span>
+              <img src="{{ url_for ('static', filename='images/athlete/hugo.jpg')}}" alt="Image" class="img-fluid image rounded-circle">
+              <h2>雨果·卡尔德拉诺</h2>
+              <span class="position">巴西</span>
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">8</span>
+              <img src="{{ url_for ('static', filename='images/athlete/mfk.jpg')}}" alt="Image" class="img-fluid image rounded-circle">
+              <h2>M-法尔克</h2>
+              <span class="position">瑞典</span>
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">9</span>
+              <img src="{{ url_for ('static', filename='images/athlete/ljk.jpg')}}" alt="Image" class="img-fluid image rounded-circle">
+              <h2>梁靖昆</h2>
+              <span class="position">中国</span>
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">10</span>
+              <img src="{{ url_for ('static', filename='images/athlete/boll.jpg')}}" alt="Image" class="img-fluid image rounded-circle">
+              <h2>波尔</h2>
+              <span class="position">德国</span>
+            </div>
+          </div>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+  
+
+    <div class="site-section feature-blocks-1 no-margin-top">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12 text-center">
+            <h2 class="text-black">Match Highlights</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="100">
+            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('images/img_1.jpg');">
+              <div class="text">
+                <h2 class="h5 text-white">Russia's World Cup Championship</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
+                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="200">
+            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('images/img_2.jpg');">
+              <div class="text">
+                <h2 class="h5 text-white">Russia's World Cup Championship</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
+                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="300">
+            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('images/img_3.jpg');">
+              <div class="text">
+                <h2 class="h5 text-white">Russia's World Cup Championship</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
+                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="mb-5">
+              <h3 class="footer-heading mb-4">关于我们</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+            </div>
+
+            
+          </div>
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="row mb-5">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">快捷菜单</h3>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="#">首页</a></li>
+                  <li><a href="#">比赛</a></li>
+                  <li><a href="#">新闻</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="#">关于</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+    </footer>
+  </div>
+
+ <script src="{{ url_for ('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery-ui.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/popper.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/owl.carousel.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery.stellar.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery.countdown.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/aos.js')}}"></script>
+
+  <script src="{{ url_for ('static', filename='js/main.js')}}"></script>
+
+  </body>
+</html>

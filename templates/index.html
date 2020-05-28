@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="{{ url_for ('static', filename='fonts/icomoon/style.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/owl.theme.default.min.css')}}">
+
+
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/aos.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}">
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-logo">
+          <a href="#"><img src="{{ url_for ('static', filename='images/logo.png')}}" alt="Image"></a>
+        </div>
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar absolute transparent" role="banner">
+      <div class="py-3">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-md-3">
+            </div>
+            <div class="col-6 col-md-9 text-right">
+              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-envelope mr-3"></span> <span class="d-none d-md-block">youremail@domain.com</span></a></div>
+              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">登录/注册</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="site-navigation position-relative text-right bg-black text-md-right" role="navigation">
+        <div class="container position-relative">
+          <div class="site-logo">
+            <a href="index.html"><img src="{{ url_for ('static', filename='images/logo.png')}}" alt=""></a>
+          </div>
+
+          <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+          <ul class="site-menu js-clone-nav d-none d-md-block">
+            <li><a href="/">首页</a></li>
+            <li><a href="/news">新闻</a></li>
+            <li><a href="/team">运动员</a></li>
+            <li><a href="/matches">活动</a></li>
+            <li><a href="/about">关于</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+
+
+    <div class="slide-one-item home-slider owl-carousel">
+      <div class="site-blocks-cover overlay" style="background-image: url({{ url_for ('static', filename='images/fzd.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-start">
+            <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
+              <h1 class="bg-text-line">2019乒乓球世界杯</h1>
+              <p><a href="/news" class="btn btn-primary btn-sm rounded-0 py-3 px-5">更多资讯</a></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div class="site-blocks-cover overlay" style="background-image: url({{ url_for ('static', filename='images/german-open.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-start">
+            <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
+              <h1 class="bg-text-line">2020德国公开赛</h1>
+              <p><a href="/news" class="btn btn-primary btn-sm rounded-0 py-3 px-5">更多资讯</a></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div class="site-blocks-cover overlay" style="background-image: url({{ url_for ('static', filename='images/qatar-open.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-start">
+            <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
+              <h1 class="bg-text-line">2020卡塔尔公开赛</h1>
+              <p><a href="/news" class="btn btn-primary btn-sm rounded-0 py-3 px-5">更多资讯</a></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+    
+
+    <div class="site-section pt-0 feature-blocks-1" data-aos="fade" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4" >
+            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('{{ url_for ('static', filename='images/2019shijiebei.jpg')}}');">
+              <div class="text">
+                <h2 class="h5 text-white">2019乒乓球世界杯</h2>
+                <p>孙颖莎3-2绝地逆转伊藤美诚 中国零封日本成就九连冠</p>
+                <p class="mb-0"><a href="/news/20191110132902101" class="btn btn-primary btn-sm px-4 py-2 rounded-0">更多资讯</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('{{ url_for ('static', filename='images/german_xuxin.jpg')}}');">
+              <div class="text">
+                <h2 class="h5 text-white">2020德国公开赛</h2>
+                <p>许昕横扫马龙首夺德公冠军 陈梦4-1丁宁女单称王</p>
+                <p class="mb-0"><a href="/news/20200202150202101" class="btn btn-primary btn-sm px-4 py-2 rounded-0">更多资讯</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('{{ url_for ('static', filename='images/qatar-fzd.jpg')}}');">
+              <div class="text">
+                <h2 class="h5 text-white">2020卡塔尔公开赛</h2>
+                <p>樊振东4-2战胜皮切福特 男单称王</p>
+                <p class="mb-0"><a href="/news/20200202150302101" class="btn btn-primary btn-sm px-4 py-2 rounded-0">更多资讯</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="site-section block-13 bg-primary fixed overlay-primary bg-image" style="background-image: url({{ url_for ('static', filename='images/logo-ITTF.png')}});"  data-stellar-background-ratio="0.5">
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12 text-center">
+            <h2 class="text-white">更多比赛精彩时刻</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="nonloop-block-13 owl-carousel">
+        <div class="item">
+          <!-- uses .block-12 -->
+          <div class="block-12">
+            <figure>
+              <img src="{{ url_for ('static', filename='images/2019sjbnt.jpg')}}" alt="Image" class="img-fluid">
+            </figure>
+            <div class="text">
+              <span class="meta">2019-11-01</span>
+              <div class="text-inner">
+                <h2 class="heading mb-3"><a href="/news/20191110145702101" class="text-black">全农2019国际乒联团体世界杯</a></h2>
+                <p>豪夺八连冠！中国男队3-1逆转韩国有惊无险登顶</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="block-12">
+            <figure>
+              <img src="{{ url_for ('static', filename='images/german-ml.jpg')}}" alt="Image" class="img-fluid">
+            </figure>
+            <div class="text">
+              <span class="meta">2020-02-02</span>
+              <div class="text-inner">
+                <h2 class="heading mb-3"><a href="/news/20200202150302101" class="text-black">2020国际乒联世界巡回赛，德国公开赛</a></h2>
+                <p>马龙4-2奥恰洛夫决赛战许昕 丁宁突破首胜王曼昱</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="block-12">
+            <figure>
+              <img src="{{ url_for ('static', filename='images/qatar-cm.jpg')}}" alt="Image" class="img-fluid">
+            </figure>
+            <div class="text">
+              <span class="meta">2020-03-08</span>
+              <div class="text-inner">
+                <h2 class="heading mb-3"><a href="/news/20200308150102101" class="text-black">2020国际乒联世界巡回赛，卡塔尔公开赛</a></h2>
+                <p>陈梦女单登顶 实现对伊藤美诚4连胜</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12 text-center">
+            <h2 class="text-black">最新资讯</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="post-entry">
+              <div class="image">
+                <img src="{{ url_for ('static', filename='images/2020sps.jpg')}}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text p-4">
+                <h2 class="h5 text-black"><a href="#">国际乒联团结一致 共克时艰</a></h2>
+                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-05-15</small></span>
+                <p class="mb-0">5月9日，国际乒联执行委员会召开会议。国际乒联高层将团结一致，共同助力乒乓球运动取得长远发展</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="post-entry">
+              <div class="image">
+                <img src="{{ url_for ('static', filename='images/2020sps.jpg')}}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text p-4">
+                <h2 class="h5 text-black"><a href="#">韩亚银行2020国际乒联世界乒乓球团体锦标赛延期</a></h2>
+                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-05-15</small></span>
+                <p class="mb-0">鉴于目前韩国新型冠状病毒疫情的严峻局势，出于对球员、工作人员、球迷的安全和健康考虑，国际乒乓球联合会（国际乒联）决定将韩亚银行2020世界乒乓球团体锦标赛暂时延期至6月21日-28日举行。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="post-entry">
+              <div class="image">
+                <img src="{{ url_for ('static', filename='images/2020sps.jpg')}}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text p-4">
+                <h2 class="h5 text-black"><a href="#">国际乒联执行委员会召开五月会议</a></h2>
+                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-05-15</small></span>
+                <p class="mb-0">5月1日，国际乒联执行委员会召开会议，讨论有关新冠疫情的最新情况</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+    <footer class="site-footer border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="mb-5">
+              <h3 class="footer-heading mb-4">关于我们</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+            </div>
+
+            
+          </div>
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="row mb-5">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">快捷菜单</h3>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="#">首页</a></li>
+                  <li><a href="#">比赛</a></li>
+                  <li><a href="#">新闻</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="#">关于</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+    </footer>
+  </div>
+
+  <script src="{{ url_for ('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery-ui.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/popper.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/owl.carousel.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery.stellar.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery.countdown.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/aos.js')}}"></script>
+
+  <script src="{{ url_for ('static', filename='js/main.js')}}"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>新闻</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="{{ url_for ('static', filename='fonts/icomoon/style.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/owl.theme.default.min.css')}}">
+
+
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/aos.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}">
+
+  </head>
+  <body>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-logo">
+          <a href="#"><img src="{{ url_for ('static', filename='images/logo.png')}}" alt="Image"></a>
+        </div>
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar absolute transparent" role="banner">
+      <div class="py-3">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-md-3">
+            </div>
+            <div class="col-6 col-md-9 text-right">
+              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-envelope mr-3"></span> <span class="d-none d-md-block">youremail@domain.com</span></a></div>
+              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">登录/注册</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="site-navigation position-relative text-right bg-black text-md-right" role="navigation">
+        <div class="container position-relative">
+          <div class="site-logo">
+            <a href="index.html"><img src="{{ url_for ('static', filename='images/logo.png')}}" alt=""></a>
+          </div>
+
+          <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+          <ul class="site-menu js-clone-nav d-none d-md-block">
+            <li><a href="/">首页</a></li>
+            <li><a href="/news">新闻</a></li>
+            <li><a href="/team">运动员</a></li>
+            <li><a href="/matches">活动</a></li>
+            <li><a href="/about">关于</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="site-blocks-cover overlay" style="background-image: url({{ url_for ('static', filename='images/logo-ITTF.png')}});" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-start">
+          <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
+            <h1 class="bg-text-line">新闻</h1>
+            <p class="mt-4"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="post-entry">
+              <div class="image">
+                <img src="{{ url_for ('static', filename='images/qatar-fzd.jpg')}}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text p-4">
+                <h2 class="h5 text-black"><a href="20200308150002101">樊振东4-2战胜皮切福特 男单称王</a></h2>
+                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-03-08</small></span>
+                <p class="mb-0">2020国际乒联世界巡回赛卡塔尔公开赛结束男单决赛的争夺。中国选手樊振东4比2战胜英格兰选手皮切福特，加冕本站男单冠军。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="post-entry">
+              <div class="image">
+                <img src="{{ url_for ('static', filename='images/qatar-cm.jpg')}}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text p-4">
+                <h2 class="h5 text-black"><a href="/news/20200308150102101">陈梦女单登顶 实现对伊藤美诚4连胜</a></h2>
+                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-03-08</small></span>
+                <p class="mb-0">2020国际乒联世界巡回赛卡塔尔公开赛结束全部女单赛事的争夺。中国选手陈梦在先失1局的情况下，连胜4局，战胜日本选手伊藤美诚，夺得本站赛事的女单冠军。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="post-entry">
+              <div class="image">
+                <img src="{{ url_for ('static', filename='images/german_xuxin.jpg')}}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text p-4">
+                <h2 class="h5 text-black"><a href="/news/20200202150202101">许昕横扫马龙首夺德公冠军 陈梦4-1丁宁女单称王</a></h2>
+                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-02-02</small></span>
+                <p class="mb-0">北京时间2月2日，2020国际乒联世界巡回赛德国公开赛全部结束。许昕横扫马龙男单称王，陈梦4比1逆转丁宁加冕女单冠军。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="post-entry">
+              <div class="image">
+                <img src="{{ url_for ('static', filename='images/german-ml.jpg')}}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text p-4">
+                <h2 class="h5 text-black"><a href="/news/20200202150302101">马龙4-2奥恰洛夫决赛战许昕 丁宁突破首胜王曼昱</a></h2>
+                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-02-02</small></span>
+                <p class="mb-0">北京时间2月2日，2020国际乒联世界巡回赛德国公开赛结束男女单打半决赛的比拼。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="post-entry">
+              <div class="image">
+                <img src="{{ url_for ('static', filename='images/2019sjbnt.jpg')}}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text p-4">
+                <h2 class="h5 text-black"><a href="/news/20191110145702101">豪夺八连冠！中国男队3-1逆转韩国有惊无险登顶</a></h2>
+                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2019-11-10</small></span>
+                <p class="mb-0">11月10日，全农2019国际乒联团体世界杯正式进入决赛日。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="post-entry">
+              <div class="image">
+                <img src="{{ url_for ('static', filename='images/2019shijiebei.jpg')}}" alt="Image" class="img-fluid">
+              </div>
+              <div class="text p-4">
+                <h2 class="h5 text-black"><a href="/news/20191110132902101">孙颖莎3-2绝地逆转伊藤美诚 中国零封日本成就九连冠</a></h2>
+                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2019-11-10</small></span>
+                <p class="mb-0">11月10日，全农2019国际乒联团体世界杯圆满谢幕，中国女团直落三盘力克东道主日本队，豪夺九连冠。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 text-center">
+                <div class="site-block-27">
+                  <ul>
+                    <li><a href="#">&lt;</a></li>
+                    <li class="active"><span>1</span></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&gt;</a></li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="mb-5">
+              <h3 class="footer-heading mb-4">关于我们</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+            </div>
+
+            
+          </div>
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="row mb-5">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">快捷菜单</h3>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="/">首页</a></li>
+                  <li><a href="/news">新闻</a></li>
+                  <li><a href="/matches">活动</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="/team">运动员</a></li>
+                  <li><a href="/about">关于</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+    </footer>
+  </div>
+
+  <script src="{{ url_for ('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery-ui.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/popper.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/owl.carousel.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery.stellar.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery.countdown.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/aos.js')}}"></script>
+
+  <script src="{{ url_for ('static', filename='js/main.js')}}"></script>
+    
+  </body>
+</html>
