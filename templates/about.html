@@ -44,7 +44,14 @@
             </div>
             <div class="col-6 col-md-9 text-right">
               <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-user mr-3"></span> <span class="d-none d-md-block">{{name}}</span></a></div>
-              <div class="d-inline-block"><a href="/login" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">{{option}}</span></a></div>
+              {% if name %}
+                    {% if priority == 1 %}
+                        <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">管理</span></a></div>
+                    {% endif %}
+                    <div class="d-inline-block"><a href="/logout" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">退出</span></a></div>
+                {% else %}
+                    <div class="d-inline-block"><a href="/login" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">登录/注册</span></a></div>
+                {% endif %}
             </div>
           </div>
         </div>
@@ -161,7 +168,7 @@
           <div class="col-lg-4">
             <div class="mb-5">
               <h3 class="footer-heading mb-4">关于我们</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+              <a href="/about"><img src="{{ url_for ('static', filename='images/logo.png')}}" alt=""></a>
             </div>
 
             

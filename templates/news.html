@@ -44,7 +44,14 @@
             </div>
             <div class="col-6 col-md-9 text-right">
               <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-user mr-3"></span> <span class="d-none d-md-block">{{name}}</span></a></div>
-              <div class="d-inline-block"><a href="/login" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">{{option}}</span></a></div>
+              {% if name %}
+                    {% if priority == 1 %}
+                        <div class="d-inline-block"><a href="/control" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">管理</span></a></div>
+                    {% endif %}
+                    <div class="d-inline-block"><a href="/logout" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">退出</span></a></div>
+                {% else %}
+                    <div class="d-inline-block"><a href="/login" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">登录/注册</span></a></div>
+                {% endif %}
             </div>
           </div>
         </div>
@@ -82,84 +89,25 @@
     <div class="site-section">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="post-entry">
-              <div class="image">
-                <img src="{{ url_for ('static', filename='images/qatar-fzd.jpg')}}" alt="Image" class="img-fluid">
-              </div>
-              <div class="text p-4">
-                <h2 class="h5 text-black"><a href="20200308150002101">樊振东4-2战胜皮切福特 男单称王</a></h2>
-                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-03-08</small></span>
-                <p class="mb-0">2020国际乒联世界巡回赛卡塔尔公开赛结束男单决赛的争夺。中国选手樊振东4比2战胜英格兰选手皮切福特，加冕本站男单冠军。</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="post-entry">
-              <div class="image">
-                <img src="{{ url_for ('static', filename='images/qatar-cm.jpg')}}" alt="Image" class="img-fluid">
-              </div>
-              <div class="text p-4">
-                <h2 class="h5 text-black"><a href="/news/20200308150102101">陈梦女单登顶 实现对伊藤美诚4连胜</a></h2>
-                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-03-08</small></span>
-                <p class="mb-0">2020国际乒联世界巡回赛卡塔尔公开赛结束全部女单赛事的争夺。中国选手陈梦在先失1局的情况下，连胜4局，战胜日本选手伊藤美诚，夺得本站赛事的女单冠军。</p>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="post-entry">
-              <div class="image">
-                <img src="{{ url_for ('static', filename='images/german_xuxin.jpg')}}" alt="Image" class="img-fluid">
-              </div>
-              <div class="text p-4">
-                <h2 class="h5 text-black"><a href="/news/20200202150202101">许昕横扫马龙首夺德公冠军 陈梦4-1丁宁女单称王</a></h2>
-                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-02-02</small></span>
-                <p class="mb-0">北京时间2月2日，2020国际乒联世界巡回赛德国公开赛全部结束。许昕横扫马龙男单称王，陈梦4比1逆转丁宁加冕女单冠军。</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="post-entry">
-              <div class="image">
-                <img src="{{ url_for ('static', filename='images/german-ml.jpg')}}" alt="Image" class="img-fluid">
-              </div>
-              <div class="text p-4">
-                <h2 class="h5 text-black"><a href="/news/20200202150302101">马龙4-2奥恰洛夫决赛战许昕 丁宁突破首胜王曼昱</a></h2>
-                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2020-02-02</small></span>
-                <p class="mb-0">北京时间2月2日，2020国际乒联世界巡回赛德国公开赛结束男女单打半决赛的比拼。</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="post-entry">
-              <div class="image">
-                <img src="{{ url_for ('static', filename='images/2019sjbnt.jpg')}}" alt="Image" class="img-fluid">
-              </div>
-              <div class="text p-4">
-                <h2 class="h5 text-black"><a href="/news/20191110145702101">豪夺八连冠！中国男队3-1逆转韩国有惊无险登顶</a></h2>
-                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2019-11-10</small></span>
-                <p class="mb-0">11月10日，全农2019国际乒联团体世界杯正式进入决赛日。</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="post-entry">
-              <div class="image">
-                <img src="{{ url_for ('static', filename='images/2019shijiebei.jpg')}}" alt="Image" class="img-fluid">
-              </div>
-              <div class="text p-4">
-                <h2 class="h5 text-black"><a href="/news/20191110132902101">孙颖莎3-2绝地逆转伊藤美诚 中国零封日本成就九连冠</a></h2>
-                <span class="text-uppercase date d-block mb-3"><small>By 易零 &bullet; 2019-11-10</small></span>
-                <p class="mb-0">11月10日，全农2019国际乒联团体世界杯圆满谢幕，中国女团直落三盘力克东道主日本队，豪夺九连冠。</p>
-              </div>
-            </div>
-          </div>
+            {% if resp %}
+                {% for item in resp %}
+                    <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="post-entry">
+                      <div class="image">
+                        <img src="{{url_for('static',filename='images/news_img/')}}{{ item[7] }}" alt="Image" class="img-fluid">
+                      </div>
+                      <div class="text p-4">
+                        <h2 class="h5 text-black"><a href="/news/{{ item[0] }}">{{item[1]}}</a></h2>
+                        <span class="text-uppercase date d-block mb-3"><small>By {{item[8]}} &bullet; {{item[5]}}</small></span>
+                        <p class="mb-0">{{ item[2] }}</p>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+            {% endif %}
+        
         </div>
-
         <div class="row">
           <div class="col-md-12 text-center">
                 <div class="site-block-27">
@@ -184,7 +132,7 @@
           <div class="col-lg-4">
             <div class="mb-5">
               <h3 class="footer-heading mb-4">关于我们</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+              <a href="/about"><img src="{{ url_for ('static', filename='images/logo.png')}}" alt=""></a>
             </div>
 
             

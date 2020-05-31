@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh">
   <head>
-    <title>{{title}}</title>
+    <title>发布页面</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700">
     <link rel="stylesheet" href="{{ url_for ('static', filename='fonts/icomoon/style.css')}}">
 
     <link rel="stylesheet" href="{{ url_for ('static', filename='css/bootstrap.min.css')}}">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ url_for ('static', filename='css/aos.css')}}">
 
     <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}">
+
 
   </head>
   <body>
@@ -42,17 +43,7 @@
           <div class="row align-items-center">
             <div class="col-6 col-md-3">
             </div>
-            <div class="col-6 col-md-9 text-right">
-              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-user mr-3"></span> <span class="d-none d-md-block">{{name}}</span></a></div>
-              {% if name %}
-                    {% if priority == 1 %}
-                        <div class="d-inline-block"><a href="/control" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">管理</span></a></div>
-                    {% endif %}
-                    <div class="d-inline-block"><a href="/logout" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">退出</span></a></div>
-                {% else %}
-                    <div class="d-inline-block"><a href="/login" class="text-secondary p-2 d-flex align-items-center"> <span class="d-none d-md-block">登录/注册</span></a></div>
-                {% endif %}
-            </div>
+            <div class="col-6 col-md-9 text-right"></div>
           </div>
         </div>
       </div>
@@ -74,54 +65,67 @@
         </div>
       </nav>
     </header>
-  
+
+
     <div class="site-blocks-cover overlay" style="background-image: url({{ url_for ('static', filename='images/logo-px.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-start">
           <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
-            <h1 class="bg-text-line">{{ title }}</h1>
-            <p class="mt-4"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section" data-aos="fade-up">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <img src="{{ url_for ('static', filename='images/news_img/')}}{{ imgs[0] }}" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-md-6 pl-md-5">
-            <h2 class="text-black">{{title}}</h2>
-            <p class="lead text-black">{{ subtitle }}</p>
-            <p class="text-black">{{ content|replace('\r\n','<br>')|safe }}</p>
+            <h1 class="bg-text-line">删除</h1>
+              <p><a href="/control" class="btn btn-primary btn-sm rounded-0 py-3 px-5">发布</a></p>
           </div>
         </div>
       </div>
     </div>
 
 
-    <div class="slide-one-item owl-carousel">
-        {% for item in imgs %}
-            <div class="bg-image center overlay" style="background-image: url({{url_for ('static', filename='images/news_img/')}}{{ item }})"></div>
-        {% endfor %}
-      <div class="bg-image center overlay" style="background-image: url({{url_for ('static', filename='images/logo-px.jpg')}})"></div>
-    </div>
+    <div class="site-section bg-light" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-first">
+            <div class="col-md-12">
+                <div class="p-3 p-lg-5 border">
+              <form action="#" method="post" class="bg-white" enctype="multipart/form-data">
+                        <ul class="list-group" id="books">
 
-    
-    </div>
+                            {% for new in resp %}
+                                <li class="list-group-item list-group-item-action" >
+                                 <table width="100%">
+                                    <tr>
+                                        <th style="width:20%" align="center">
+                                            <h5 class="mb-1">{{ new[1] }}</h5>
+                                            <p class="mb-1">{{ new[0] }}</p>
+                                        </th>
+                                        <th style="width:13.5%" align="center"><h5 class="mb-1"></h5></th>
+                                        <th style="width:11%" align="center"><h5 class="mb-1"></h5></th>
+                                        <th style="width:12.5%" align="center"><h5 class="mb-1">编辑者：{{ new[8] }}</h5></th>
+                                        <th style="width:11%" align="center"><h5 class="mb-1"></h5></th>
+                                        <th style="width:12.5%" align="center"><h5 class="mb-1"></h5></th>
+                                        <th style="width:8.5%" align="center"><a href="/delete/{{ new[0] }}"><input type="button" class="btn btn-primary btn-lg btn-block" value="删除"></a> </th>
+                                    </tr>
+                                 </table>
+                            </li>
+                            {% endfor %}
 
+                        </ul>
+              </form>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+      </div>
     <footer class="site-footer border-top">
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
             <div class="mb-5">
               <h3 class="footer-heading mb-4">关于我们</h3>
-                <a href="/about"><img src="{{ url_for ('static', filename='images/logo.png')}}" alt=""></a>
-              </div>
+              <a href="/about"><img src="{{ url_for ('static', filename='images/logo.png')}}" alt=""></a>
+            </div>
 
-            
+
           </div>
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="row mb-5">
@@ -160,6 +164,6 @@
   <script src="{{ url_for ('static', filename='js/aos.js')}}"></script>
 
   <script src="{{ url_for ('static', filename='js/main.js')}}"></script>
-    
+
   </body>
 </html>
