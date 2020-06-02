@@ -8,10 +8,11 @@ app.config['SECRET_KEY'] = 'px1314'
 @app.route('/')
 def index():
     # print(session)
+    news = opSql.get_news_for_index()
     if session.get('username') is None:
-        return render_template('index.html', newurl='/login', name='', option="登录/注册")
+        return render_template('index.html', newurl='/login', name='', option="登录/注册", resp=news)
     else:
-        return render_template('index.html', name=session.get('username'), priority=session.get('priority'))
+        return render_template('index.html', name=session.get('username'), priority=session.get('priority'), resp=news)
 
 
 @app.route('/news/')
@@ -48,7 +49,7 @@ def matches():
     if session.get('username') is None:
         return render_template('matches.html', newurl='/login', name='', option="登录/注册")
     else:
-        return render_template('matches.html', newurl='/logout', name=session.get('username'), option="退出")
+        return render_template('matches.html', name=session.get('username'), priority=session.get('priority'))
 
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -65,7 +66,6 @@ def login():
             return redirect(url_for('index'))
         
         """
-
         (f, id) = opSql.login(name, pwd)
         # print(f)
         # session['user_id'] = id

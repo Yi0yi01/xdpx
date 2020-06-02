@@ -30,6 +30,9 @@ def register(name, email, pwd=123456):
         cursor.execute(sql)
         result = cursor.fetchall()
         id = result[0][0] + 1
+        # print(pwd)
+        if pwd == '':
+            pwd = "123456"
         sql = "INSERT INTO user VALUES (%d,'%s','%s','%s',0)" % (id, name, pwd, email)
         cursor.execute(sql)
         db.commit()
@@ -68,9 +71,30 @@ def get_cover_imgs():
         print("get_cover_imgs() error")
 
 
+def get_news_for_index():
+    sql = "SELECT newsinfo.*,img,user.name FROM newsinfo,img,user WHERE newsinfo.id=img.newsid AND " \
+          "newsinfo.userid=user.id AND newsinfo.category='02' ORDER BY newsinfo.id DESC "
+    try:
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        result = list(result)
+        for item in result:
+            item = list(item)
+            item[5] = str(datetime.strftime(item[5], '%Y-%m-%d'))
+            print(item[5])
+            item = tuple(item)
+            print(item[5])
+        for item in result:
+            print(item[5])
+        result = tuple(result)
+        return result
+    except pymysql:
+        print("get_all_news() error")
+
+
 def get_all_news():
-    sql = "SELECT newsinfo.*,img,user.name FROM newsinfo,img,user WHERE newsinfo.id=img.newsid and " \
-          "newsinfo.userid=user.id ORDER BY newsinfo.id DESC "
+    sql = "SELECT newsinfo.*,img,user.name FROM newsinfo,img,user WHERE newsinfo.id=img.newsid AND " \
+            "newsinfo.userid=user.id ORDER BY newsinfo.id DESC"
     try:
         cursor.execute(sql)
         result = cursor.fetchall()
@@ -122,5 +146,9 @@ news = get_all_news()
 print(len(news))
 re = get_new_img(20191110132902101)
 print(re[0])
+cursor.execute("SELECT NOW()")
+t = str(datetime.strftime(cursor.fetchall()[0][0], '%Y-%m-%d'))
+print(t)
 '''
+print(get_news_for_index())
 
